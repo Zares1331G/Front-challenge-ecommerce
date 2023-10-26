@@ -6,7 +6,6 @@ import Footer from "./components/footer"
 import './app.css'
 
 const App = () => {
-  //const { test } = useContext(StoreContext)
 
   return (
     <StoreContextProvider>

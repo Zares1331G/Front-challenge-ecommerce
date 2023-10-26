@@ -1,0 +1,55 @@
+.container-home {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-inline: 2rem;
+    margin: 0 auto;
+    max-width: 90rem;
+}
+
+.home-card-result {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 7.875rem;
+}
+
+.home-card-result-image {
+    width: 6.875rem;
+}
+
+.home-card-result-buy-button {
+    align-items: center;
+    background-color: #F78524;
+    border-radius: 0.75rem;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    height: 2.938rem;
+    width: 9.625rem;
+}
+
+.home-card-result-buy-button span {
+    align-items: center;
+    color: #ffffff;
+    display: flex;
+    font-size: 0.875rem;
+    justify-content: center;
+}
+
+.home-card-result-buy-button span::after {
+    content: url('../assets/home/add-to-cart-button-icon.png');
+}
+
+@media (min-width: 64rem) {
+    .home-card-result {
+        width: 10.313rem;
+    }
+
+    .home-card-result-image {
+        width: 9.313rem;
+    }
+}

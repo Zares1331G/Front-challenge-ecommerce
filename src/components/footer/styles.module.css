@@ -1,5 +1,29 @@
 .container-footer {
+    background-color: #F7F7F7;
     bottom: 0;
-    height: 4.188rem;
     position: fixed;
+    width: 100%;
+}
+
+.container-footer ul {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.375rem;
+    justify-content: space-evenly;
+    min-height: 4.188rem;
+    padding: 0;
+    max-width: 90rem;
+    margin: 0 auto;
+}
+
+.container-footer ul li {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@media (min-width: 64rem) {
+    .container-footer {
+        padding-inline: 2rem;
+    }
 }

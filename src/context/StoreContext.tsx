@@ -1,24 +1,25 @@
-import { ReactNode, createContext, useState } from "react";
+import { createContext, useState } from "react";
+import useFetch from "../hooks/useFetch";
+import { StoreContextType, StoreContextProviderProps } from "../typing";
 
-interface StoreContextType {
-    test: string;
-    settest: React.Dispatch<React.SetStateAction<string>>
-}
 
-interface StoreContextProviderProps {
-    children: ReactNode;
-}
 
 export const StoreContext = createContext<StoreContextType>({
     test: "Hola!",
-    settest: () => { }
+    settest: () => { },
+    data: [],
+    loading: true,
+    error: ''
 })
 
 export const StoreContextProvider: React.FC<StoreContextProviderProps> = ({ children }) => {
     const [test, settest] = useState("Hola")
+    const { data, loading, error } = useFetch('https://fakestoreapi.com/products')
+
+    console.log(data, loading, error)
 
     return (
-        <StoreContext.Provider value={{ test, settest }}>
+        <StoreContext.Provider value={{ test, settest, data, loading, error }}>
             {children}
         </StoreContext.Provider>
     )
