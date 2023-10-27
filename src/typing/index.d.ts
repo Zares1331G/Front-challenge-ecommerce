@@ -17,6 +17,8 @@ export interface StoreContextType {
     data: dataResult[]
     loading: boolean
     error: string
+    dataProduct: dataResult[]
+    setDataProduct:  React.Dispatch<React.SetStateAction<dataResult[]>>
 }
 
 export interface StoreContextProviderProps {

@@ -5,16 +5,17 @@ import styles from './styles.module.css'
 
 
 const Home = () => {
-  const { data, loading } = useContext(StoreContext)
+  const { dataProduct, loading } = useContext(StoreContext)
 
-  console.log(data, loading)
+  console.log(dataProduct, loading)
 
   return (
     <>
       {loading ?
         <>Loading</> :
         <div className={styles['container-home']}>
-          {data.map((card: dataResult) => (
+          {/* Refactorizar en un nuevo componente */}
+          {dataProduct.map((card: dataResult) => (
             <div className={styles['home-card-result']} key={card.id}>
               <img className={styles['home-card-result-image']} src={card.image} alt={card.title} />
               <div>{card.title}</div>

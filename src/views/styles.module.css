@@ -2,9 +2,11 @@
     align-items: center;
     display: flex;
     flex-wrap: wrap;
+    gap: 1.25rem;
     justify-content: space-between;
-    padding-inline: 2rem;
-    margin: 0 auto;
+    padding-inline: 1rem;
+    margin: 0 auto 5.188rem;
+    ;
     max-width: 90rem;
 }
 
@@ -13,7 +15,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 7.875rem;
+    width: 11rem;
 }
 
 .home-card-result-image {
@@ -29,7 +31,7 @@
     display: flex;
     justify-content: center;
     height: 2.938rem;
-    width: 9.625rem;
+    width: 100%;
 }
 
 .home-card-result-buy-button span {
@@ -45,8 +47,14 @@
 }
 
 @media (min-width: 64rem) {
+    .container-home {
+        justify-content: center;
+        padding-inline: 2rem;
+    }
+
     .home-card-result {
-        width: 10.313rem;
+        padding-inline: .5rem;
+        width: 13.875rem;
     }
 
     .home-card-result-image {
