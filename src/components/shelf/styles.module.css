@@ -10,26 +10,6 @@
     width: 6.875rem;
 }
 
-.shelf-buy-button {
-    align-items: center;
-    background-color: #F78524;
-    border-radius: 0.75rem;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    height: 2.938rem;
-    width: 100%;
-}
-
-.shelf-buy-button span {
-    align-items: center;
-    color: #ffffff;
-    display: flex;
-    font-size: 0.875rem;
-    justify-content: center;
-}
-
 .shelf-container-detail {
     align-items: center;
     color: #000000;
@@ -37,37 +17,6 @@
     flex-direction: column;
     justify-content: center;
     text-decoration: none;
-}
-
-.shelf-buy-button-finish {
-    align-items: center;
-    background-color: #F4F4F4;
-    border: none;
-    border-radius: 0.75rem;
-    box-shadow: 0 1px 3px 0 rgba(0,0,0,.48);
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    height: 2.938rem;
-    width: 100%;
-}
-
-.shelf-buy-button-finish span {
-    align-items: center;
-    color: #000000;
-    display: flex;
-    font-size: 0.875rem;
-    font-weight: bold;
-    justify-content: center;
-}
-
-.shelf-buy-button-link {
-    text-decoration: none;
-    width: 100%;
-}
-
-.shelf-buy-button span::after {
-    content: url('../../assets/shelf/add-to-cart-button-icon.png');
 }
 
 @media (min-width: 64rem) {

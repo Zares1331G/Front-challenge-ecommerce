@@ -1,0 +1,24 @@
+.container-checkout {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+}
+
+.container-checkout-items {
+    background-color: #F4F4F4;
+    border-radius: 10px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 15px;
+}
+
+@media (min-width: 64rem) {
+    .container-checkout-items {
+        width: 700px;
+
+    }
+}
