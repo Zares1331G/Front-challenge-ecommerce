@@ -7,6 +7,7 @@ const Header = () => {
 
   const { data, setDataProduct, minicart } = useContext(StoreContext)
 
+  //Esta función sirve para quitar los acentos
   const removeAccents = (str: string) => {
     return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
   }
@@ -27,7 +28,9 @@ const Header = () => {
 
   return (
     <header className={styles['container-header']}>
-      <div className={styles['header-logo']} />
+      <Link to='/'>
+        <div className={styles['header-logo']} />
+      </Link>
       <div><input placeholder="Buscar en tu exito.com" onChange={handleFilterData} type="text" /></div>
       <Link to='/checkout'>
         <div className={styles['header-minicart']}>

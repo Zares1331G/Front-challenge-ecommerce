@@ -3,6 +3,7 @@ import { StoreContext } from "../../context/StoreContext"
 import { dataResult } from "../../typing"
 import styles from './styles.module.css'
 import Shelf from "../../components/shelf"
+import Spinner from "../../components/spinner"
 
 
 const Home = () => {
@@ -11,7 +12,9 @@ const Home = () => {
   return (
     <>
       {loading ?
-        <>Loading</> :
+        <>
+          <Spinner />
+        </> :
         <div className={styles['container-home']}>
           {dataProduct.map((card: dataResult) => (
             <Shelf

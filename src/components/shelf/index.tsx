@@ -1,8 +1,8 @@
 import { useContext, useState } from 'react'
 import { StoreContext } from '../../context/StoreContext'
 import { Link } from 'react-router-dom'
-import styles from './styles.module.css'
 import { dataResult } from '../../typing'
+import styles from './styles.module.css'
 
 const Shelf = ({ image, title, category, price, id }: any) => {
     const [saveInCart, setSaveInCart] = useState<boolean>(false)
