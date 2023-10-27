@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom"
-import Home from "../views/home"
-import Checkout from "../views/checkout"
-import ProductPage from "../views/pdp"
+import Home from "../pages/home"
+import Checkout from "../pages/checkout"
+import ProductPage from "../pages/pdp"
 
 const AppRouter = () => {
   return (
