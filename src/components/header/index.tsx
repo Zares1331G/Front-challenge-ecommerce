@@ -1,10 +1,11 @@
-import { useContext/* , useState */ } from "react"
+import { useContext, useEffect } from "react"
 import { StoreContext } from "../../context/StoreContext"
 import styles from './styles.module.css'
+import { Link } from "react-router-dom"
 
 const Header = () => {
 
-  const { data, setDataProduct } = useContext(StoreContext)
+  const { data, setDataProduct, minicart } = useContext(StoreContext)
 
   const removeAccents = (str: string) => {
     return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
@@ -18,11 +19,21 @@ const Header = () => {
     setDataProduct(filteredProducts)
   }
 
+  useEffect(() => {
+    console.log(minicart, "MINI")
+  }, [minicart])
+
+  console.log(minicart, "MINI")
+
   return (
     <header className={styles['container-header']}>
       <div className={styles['header-logo']} />
-      <div><input onChange={handleFilterData} type="text" /></div>
-      <div>filter</div>
+      <div><input placeholder="Buscar en tu exito.com" onChange={handleFilterData} type="text" /></div>
+      <Link to='/checkout'>
+        <div className={styles['header-minicart']}>
+          <span>{minicart.length}</span>
+        </div>
+      </Link>
     </header>
   )
 }

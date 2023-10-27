@@ -1,0 +1,17 @@
+.container-home {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    justify-content: space-between;
+    padding-inline: 1rem;
+    margin: 0 auto 5.188rem;
+    max-width: 90rem;
+}
+
+@media (min-width: 64rem) {
+    .container-home {
+        justify-content: center;
+        padding-inline: 2rem;
+    }
+}

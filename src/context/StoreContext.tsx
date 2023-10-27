@@ -3,22 +3,21 @@ import useFetch from "../hooks/useFetch";
 import { StoreContextType, StoreContextProviderProps, dataResult } from "../typing";
 
 export const StoreContext = createContext<StoreContextType>({
-    test: "Hola!",
-    settest: () => { },
     data: [],
     loading: true,
     error: '',
     dataProduct: [],
-    setDataProduct: () => { }
+    setDataProduct: () => { },
+    minicart: [], 
+    setMinicart: () => { }
 })
 
 export const StoreContextProvider: React.FC<StoreContextProviderProps> = ({ children }) => {
     const apiUrl = 'https://fakestoreapi.com/products'
-
     const { data, loading, error } = useFetch(apiUrl)
 
-    const [test, settest] = useState("Hola")
-    const [dataProduct, setDataProduct] = useState<any>([])
+    const [ dataProduct, setDataProduct ] = useState<dataResult[]>([])
+    const [ minicart, setMinicart ] = useState<dataResult[]>([])
 
     useEffect(() => {
         if (loading) return
@@ -31,14 +30,14 @@ export const StoreContextProvider: React.FC<StoreContextProviderProps> = ({ chil
     console.log(data, loading, error)
 
     return (
-        <StoreContext.Provider value={{ 
-            test, 
-            settest, 
-            data, 
-            loading, 
-            error, 
-            dataProduct, 
-            setDataProduct 
+        <StoreContext.Provider value={{
+            data,
+            loading,
+            error,
+            dataProduct,
+            setDataProduct,
+            minicart, 
+            setMinicart
         }}>
             {children}
         </StoreContext.Provider>

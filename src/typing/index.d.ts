@@ -11,14 +11,13 @@ export interface dataResult {
 }
 
 export interface StoreContextType {
-    test: string;
-    settest: React.Dispatch<React.SetStateAction<string>>
-
     data: dataResult[]
     loading: boolean
     error: string
     dataProduct: dataResult[]
-    setDataProduct:  React.Dispatch<React.SetStateAction<dataResult[]>>
+    setDataProduct: React.Dispatch<React.SetStateAction<dataResult[]>>
+    minicart: dataResult[]
+    setMinicart: React.Dispatch<React.SetStateAction<dataResult[]>>
 }
 
 export interface StoreContextProviderProps {
