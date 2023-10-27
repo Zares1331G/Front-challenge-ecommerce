@@ -30,6 +30,15 @@
     justify-content: center;
 }
 
+.shelf-container-detail {
+    align-items: center;
+    color: #000000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-decoration: none;
+}
+
 .shelf-buy-button-finish {
     align-items: center;
     background-color: #F4F4F4;

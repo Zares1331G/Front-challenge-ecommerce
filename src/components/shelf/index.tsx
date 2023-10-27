@@ -21,10 +21,12 @@ const Shelf = ({ image, title, category, price, id }: any) => {
 
     return (
         <div className={styles['shelf-container']} key={id}>
-            <img className={styles['shelf-image']} src={image} alt={title} />
-            <div>{title}</div>
-            <div>{category}</div>
-            <div>${price}</div>
+            <Link className={styles['shelf-container-detail']} to={`/product-page/${id}`}>
+                <img className={styles['shelf-image']} src={image} alt={title} />
+                <div>{title}</div>
+                <div>{category}</div>
+                <div>${price}</div>
+            </Link>
             {
                 saveInCart ?
                     <Link className={styles['shelf-buy-button-link']} to='/checkout'>

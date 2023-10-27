@@ -1,9 +1,9 @@
 import { useContext } from "react"
 import { StoreContext } from "../../context/StoreContext"
 import { dataResult } from "../../typing"
-import styles from './styles.module.css'
 import Shelf from "../../components/shelf"
 import Spinner from "../../components/spinner"
+import styles from './styles.module.css'
 
 
 const Home = () => {

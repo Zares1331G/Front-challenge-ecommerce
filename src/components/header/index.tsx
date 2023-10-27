@@ -31,7 +31,7 @@ const Header = () => {
       <Link to='/'>
         <div className={styles['header-logo']} />
       </Link>
-      <div><input placeholder="Buscar en tu exito.com" onChange={handleFilterData} type="text" /></div>
+      <input placeholder="Buscar en tu exito.com" onChange={handleFilterData} type="text" />
       <Link to='/checkout'>
         <div className={styles['header-minicart']}>
           <span>{minicart.length}</span>

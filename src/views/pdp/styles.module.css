@@ -1,0 +1,26 @@
+.container-product-details {
+    padding-inline: 2rem;
+    margin: 0 auto 5.188rem;
+    max-width: 90rem;
+}
+
+.product-details-breadcrumb {}
+
+.product-details-summary {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-details-summary-image {
+    width: 100%;
+}
+
+@media (min-width: 64rem) {
+    .product-details-summary {
+        flex-direction: row;
+    }
+
+    .product-details-summary-image {
+        width: 50%;
+    }
+}
