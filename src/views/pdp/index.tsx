@@ -1,21 +1,21 @@
-import { useContext, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
-import { StoreContext } from '../../context/StoreContext';
 import Spinner from '../../components/spinner';
 import styles from './styles.module.css'
+import { dataResult } from '../../typing';
 
 const ProductPage = () => {
     const { id: idParams } = useParams();
-    const { data } = useContext(StoreContext)
 
     const [productDetails, setProductDetails] = useState<any>()
 
+    const cachedData: any = sessionStorage.getItem('dataProduct');
+
     useEffect(() => {
         if (!idParams) return
-        setProductDetails(data.find((producto) => producto.id === parseInt(idParams)));
+        setProductDetails(JSON.parse(cachedData).find((producto: dataResult) => producto.id === parseInt(idParams)));
     }, [idParams])
 
-    console.log(productDetails)
     return (
         <>
             {!productDetails ?
